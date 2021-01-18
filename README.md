@@ -7,9 +7,7 @@ This project is a search restaurant application development, which enables the u
 [![Screen-Shot-2021-01-18-at-11-58-23-AM.png](https://i.postimg.cc/KzDJYndM/Screen-Shot-2021-01-18-at-11-58-23-AM.png)](https://postimg.cc/Kk4nqgcG)
 [![Screen-Shot-2021-01-18-at-11-58-42-AM.png](https://i.postimg.cc/PJfKvCjF/Screen-Shot-2021-01-18-at-11-58-42-AM.png)](https://postimg.cc/3462PJWg)
 [![Screen-Shot-2021-01-18-at-11-59-03-AM.png](https://i.postimg.cc/bNBLdYF3/Screen-Shot-2021-01-18-at-11-59-03-AM.png)](https://postimg.cc/9ryyn227)
-[![Screen-Shot-2021-01-18-at-11-49-37-AM.png](https://i.postimg.cc/W1x9YpGh/Screen-Shot-2021-01-18-at-11-49-37-AM.png)](https://postimg.cc/CRHHzg6g)
-[![Screen-Shot-2021-01-18-at-11-49-37-AM.png](https://i.postimg.cc/W1x9YpGh/Screen-Shot-2021-01-18-at-11-49-37-AM.png)](https://postimg.cc/CRHHzg6g)
-[![Screen-Shot-2021-01-18-at-11-49-37-AM.png](https://i.postimg.cc/W1x9YpGh/Screen-Shot-2021-01-18-at-11-49-37-AM.png)](https://postimg.cc/CRHHzg6g)
+
 [![Screen-Shot-2021-01-18-at-11-59-42-AM.png](https://i.postimg.cc/3NL1X3rr/Screen-Shot-2021-01-18-at-11-59-42-AM.png)](https://postimg.cc/XBC93Syt)
 [![Screen-Shot-2021-01-18-at-12-03-51-PM.png](https://i.postimg.cc/NfS7BJ5n/Screen-Shot-2021-01-18-at-12-03-51-PM.png)](https://postimg.cc/Mv0jYY00)
 [![Screen-Shot-2021-01-18-at-12-03-58-PM.png](https://i.postimg.cc/nhmKz4mh/Screen-Shot-2021-01-18-at-12-03-58-PM.png)](https://postimg.cc/DS24pb59)
