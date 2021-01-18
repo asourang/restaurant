@@ -1,5 +1,5 @@
 # Project details: 
-This project is a search restaurant application development, which enables the user to search for a retaurants to order food and place his order on his own convenience. This application is a hybrid app, which supports both Ios and Android operating systems and was  developped on Visual Studio Code version 1.52.1 with react native,node.js and expo version 1.0.0. 
+This project is a search restaurant application development, which enables the user to search for a retaurants to order food and place his order on his own convenience. This application is a hybrid app, which supports both Ios and Android operating systems and was  developped on Visual Studio Code version 1.52.1 with react native,node.js and expo version 1.0.0. The Android build of the application is published on Diawi and the link is https://www.diawi.com/qrcode/link/CSzrsH.
 
 # ScreenShots
 [![Screen-Shot-2021-01-18-at-11-49-37-AM.png](https://i.postimg.cc/W1x9YpGh/Screen-Shot-2021-01-18-at-11-49-37-AM.png)](https://postimg.cc/CRHHzg6g)
