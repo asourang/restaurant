@@ -3,8 +3,7 @@ This project is a search restaurant application development, which enables the u
 
 # ScreenShots
 [![Screen-Shot-2021-01-18-at-11-49-37-AM.png](https://i.postimg.cc/W1x9YpGh/Screen-Shot-2021-01-18-at-11-49-37-AM.png)](https://postimg.cc/CRHHzg6g)
-[![Screen-Shot-2021-01-18-at-11-49-51-AM.png](https://i.postimg.cc/50Vs1PkJ/Screen-Shot-2021-01-18-at-11-49-51-AM.png)](https://postimg.cc/B8mTBC07)
-[![Screen-Shot-2021-01-18-at-11-49-59-AM.png](https://i.postimg.cc/R0fgkrdG/Screen-Shot-2021-01-18-at-11-49-59-AM.png)](https://postimg.cc/R3S1tDjn)
+
 [![Screen-Shot-2021-01-18-at-11-58-23-AM.png](https://i.postimg.cc/KzDJYndM/Screen-Shot-2021-01-18-at-11-58-23-AM.png)](https://postimg.cc/Kk4nqgcG)
 [![Screen-Shot-2021-01-18-at-11-58-42-AM.png](https://i.postimg.cc/PJfKvCjF/Screen-Shot-2021-01-18-at-11-58-42-AM.png)](https://postimg.cc/3462PJWg)
 [![Screen-Shot-2021-01-18-at-11-59-03-AM.png](https://i.postimg.cc/bNBLdYF3/Screen-Shot-2021-01-18-at-11-59-03-AM.png)](https://postimg.cc/9ryyn227)
