@@ -15,6 +15,8 @@ import {
 
 function Drinks({navigation,route}) {
   const{basket}=route.params;
+  const{location}=route.params;
+  const{Time}=route.params;
   const menuArray = [
     {name : "Regular Drink",price:2.19,calories:340,key:"1"},
     {name : "Large Drink",price:2.19,calories:580,key:"2"},
@@ -35,7 +37,7 @@ function Drinks({navigation,route}) {
         renderItem={({ item }) => (
           
           <View style={styles1.listItem}>
-          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodPrice:item.price,foodCalories:item.calories})}>
+          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodName:item.name,foodPrice:item.price,foodCalories:item.calories,location:location,Time:Time})}>
               
             <View style={styles1.metaInfo}>
            

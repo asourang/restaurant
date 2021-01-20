@@ -5,127 +5,63 @@ import {
    Text, 
    View, 
    FlatList, 
-   ActivityIndicator, 
-   Image,
-   TextInput,
    TouchableOpacity
   } from 'react-native';
-import filter from 'lodash.filter';
+
+function SearchScreen({navigation,route}){
+  const{Time}=route.params;
+const menuArray = [
+  {name : "Sterling",address:'46220 Potomac Run Plaza, Sterling, VA 20164',key:"1"},
+  {name : "Ashburn",address:'44650 Waxpool Rd, Ashburn, VA 20147',key:"2"},
+  {name : "Leesburg",address:'1083 Edwards Ferry Rd NE, Leesburg, VA 20176',key:"3"},
+  {name : "Reston",address:'11674 Plaza America Dr, Reston, VA 20190',key:"4"},
+  {name : "Potomac",address:'9812 Falls Rd, Potomac, MD 20854',key:"5"},
+  {name : "Chantilly",address:'14421 Chantilly Crossing Ln, Chantilly, VA 20151',key:"6"},
+
+];
 
 
-function SearchScreen({navigation}) {
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const [query, setQuery] = useState('');
-  const [fullData, setFullData] = useState([]);
-
-  useEffect(() => {
-    setIsLoading(true);
-  
-    fetch(API_ENDPOINT)
-      .then(response => response.json())
-      .then(response => {
-        setData(response.results);
-  
-        // ADD THIS
-        setFullData(response.results);
-  
-        setIsLoading(false);
-      })
-      .catch(err => {
-        setIsLoading(false);
-        setError(err);
-      });
-  }, []);
-  //...
-  function renderHeader() {
-    return (
-      <View
-        style={{
-          backgroundColor: '#fff',
-          padding: 10,
-          marginVertical: 10,
-          borderRadius: 20
-        }}
-      >
-        <TextInput
-          autoCapitalize="none"
-          autoCorrect={false}
-          clearButtonMode="always"
-          value={query}
-          onChangeText={queryText => handleSearch(queryText)}
-          placeholder="Search"
-          style={{ backgroundColor: '#fff', paddingHorizontal: 20 }}
-        />
-      </View>
-    );
-  }
-// â€¦ render JSX below
-
-const handleSearch = text => {
-  const formattedQuery = text.toLowerCase();
-  const filteredData = filter(fullData, user => {
-    return contains(user, formattedQuery);
-  });
-  setData(filteredData);
-  setQuery(text);
-};
-
-const contains = ({ name, email }, query) => {
-  const { first, last } = name;
-
-  if (first.includes(query) || last.includes(query) || email.includes(query)) {
-    return true;
-  }
-
-  return false;
-};
-
-  if (isLoading) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#5500dc" />
-      </View>
-    );
-  }
-
-  
-
-  const API_ENDPOINT = `https://randomuser.me/api/?seed=1&page=1&results=20`;
 
 
   return (
-    <View style={styles.container}>
+    <View style={styles1.container}>
   
       <FlatList 
-        data={data}
-        ListHeaderComponent={renderHeader}
+        data={menuArray}
+       
       keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           
-          <View style={styles.listItem}>
-           <TouchableOpacity onPress={() => navigation.navigate('Menu',{price:0} )}>
+          <View style={styles1.listItem}>
+          <TouchableOpacity onPress={() =>navigation.navigate('Menu',{location:item.address, Time:Time})}>
               
-            <View style={styles.metaInfo}>
-            <Text style={styles.title}>{`${item.name.first} ${
-                item.name.last
-              }`}</Text>
+            <View style={styles1.metaInfo}>
+           
+            <Text style={styles1.title}>{item.name}</Text>
+            <Text >{item.address}</Text>
+            <Text >In-Store Pickup,Curbside, Delivery</Text>
             </View></TouchableOpacity>
+            
           </View>
+          
         )}
       />
+
+      
     </View>
+    
+
+
+
   );
 }
 
 export default SearchScreen;
 
-const styles = StyleSheet.create({
+const styles1 = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#ffeeda',
     alignItems: 'center'
   },
   text: {
@@ -136,8 +72,8 @@ const styles = StyleSheet.create({
   },
   listItem: {
     marginTop: 10,
-    paddingVertical: 20,
-    paddingHorizontal: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
     backgroundColor: '#fff',
     flexDirection: 'row'
   },
@@ -150,8 +86,9 @@ const styles = StyleSheet.create({
     marginLeft: 10
   },
   title: {
+    fontWeight:'bold',
     fontSize: 18,
-    width: 200,
-    padding: 10
+    width: 400,
+    paddingBottom: 5
   }
-});
+})

@@ -10,16 +10,18 @@ import {
 
 function MenuScreen({navigation,route}) {
   const{basket}=route.params;
+  const{location}=route.params;
+    const{Time}=route.params;
+    const[page,setpage]=useState();
 const menuArray = [
   {name : "Burger",screen:'Burgers',key:"1"},
-  {name : "Hot Dog",screen:'Hot Dog',key:"2"},
-  {name : "Sandwiches",screen:'Sandwishes',key:"3"},
+  {name : "Hot Dog",screen:'Hot Dogs',key:"2"},
+  {name : "Sandwiches",screen:'Sandwiches',key:"3"},
   {name : "Fries",screen:'Fries',key:"4"},
   {name : "Drinks",screen:'Drinks',key:"5"},
   {name : "Shakes",screen:'Shakes',key:"6"},
 
 ];
-
 
 
 
@@ -33,7 +35,7 @@ const menuArray = [
         renderItem={({ item }) => (
           
           <View style={styles1.listItem}>
-          <TouchableOpacity onPress={() =>navigation.navigate(item.screen,{burger:8.99,menu:basket})}>
+          <TouchableOpacity onPress={() =>navigation.navigate(item.screen,{burger:8.99,menu:basket,location:location,Time:Time})}>
               
             <View style={styles1.metaInfo}>
            

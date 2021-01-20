@@ -14,6 +14,7 @@ import {
 
 
 function Fries({navigation,route}) {
+  const{location}=route.params;
   const{basket}=route.params;
   const menuArray = [
     {name : "Little Fries",price:3.19,calories:540,key:"1"},
@@ -35,7 +36,7 @@ function Fries({navigation,route}) {
         renderItem={({ item }) => (
           
           <View style={styles1.listItem}>
-          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodPrice:item.price,foodCalories:item.calories})}>
+          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodName:item.name,foodPrice:item.price,foodCalories:item.calories,location:location})}>
               
             <View style={styles1.metaInfo}>
            

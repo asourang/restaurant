@@ -154,7 +154,7 @@ export const styles = StyleSheet.create({
        fontSize: 30,
        color:"white",
        fontWeight: 'bold',
-       marginTop:200,
+       marginTop:150,
        alignItems: 'center',
       justifyContent: 'center',
        width:430,
@@ -195,8 +195,8 @@ export const styles = StyleSheet.create({
      },
      orderType: {
       flexDirection:'row',
-      borderWidth:1,
-      borderColor:'white',
+   
+  
        padding:15,
        fontFamily:"Palatino",
        fontSize: 30,

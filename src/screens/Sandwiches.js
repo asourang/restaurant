@@ -15,7 +15,8 @@ import {
 
 function Sandwiches({navigation,route}) {
   const{basket}=route.params;
-
+  const{location}=route.params;
+  const{Time}=route.params;
   
 
 
@@ -39,7 +40,7 @@ function Sandwiches({navigation,route}) {
         renderItem={({ item }) => (
           
           <View style={styles1.listItem}>
-          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodPrice:item.price,foodCalories:item.calories})}>
+          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodName:item.name,foodPrice:item.price,foodCalories:item.calories,location:location,Time:Time})}>
               
             <View style={styles1.metaInfo}>
            

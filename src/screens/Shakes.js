@@ -15,6 +15,8 @@ import {
 
 function Shakes({navigation,route}) {
   const{basket}=route.params;
+  const{location}=route.params;
+  const{Time}=route.params;
   const menuArray = [
     {name : "Milkshake",price:4.99,calories:900,key:"1"},
   
@@ -32,7 +34,7 @@ function Shakes({navigation,route}) {
         renderItem={({ item }) => (
           
           <View style={styles1.listItem}>
-          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodPrice:item.price,foodCalories:item.calories})}>
+          <TouchableOpacity onPress={() => navigation.navigate('AddOns',{foodName:item.name,foodPrice:item.price,foodCalories:item.calories,location:location,Time:Time})}>
               
             <View style={styles1.metaInfo}>
            

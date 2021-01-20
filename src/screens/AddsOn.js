@@ -42,8 +42,10 @@ value: 'six'
 const AddOns=({ navigation,route }) =>{
   //burger price and calories
   const {foodPrice}=route.params;
+  const {foodName}=route.params;
   const {foodCalories}=route.params;
-
+  const{location}=route.params;
+  const{Time}=route.params;
   
    
 
@@ -159,9 +161,9 @@ const AddOns=({ navigation,route }) =>{
 
           <View>
   
-  <TouchableOpacity  onPress={()=>{navigation.navigate('basket',{totalBasket:total})}}
+  <TouchableOpacity  onPress={()=>{navigation.navigate('basket',{number:quantity,foodName:foodName,totalBasket:total,location:location,Time:Time})}}
         title="Search" style={styles.addBasket}>
-        <Text >Add to Basket - {total} </Text>
+        <Text >Add to Basket - {total.toFixed(2)} </Text>
       </TouchableOpacity>
       </View>
       

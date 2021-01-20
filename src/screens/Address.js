@@ -8,9 +8,9 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import {LoginStackNavigator }from "./Stack";
  
-export default function LoginScreen({ navigation }) {
+export default function Address ({ navigation ,route}) {
+  const{Time}=route.params;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
@@ -18,13 +18,12 @@ export default function LoginScreen({ navigation }) {
     <View style={ styles2.container}>
      
       <StatusBar style="auto" />
-   
+     
       <View style={styles2.generalInput}>
-      
   
   <TextInput
     style={styles2.TextInput}
-    placeholder="Email"
+    placeholder="Street Address"
     placeholderTextColor="#003f5c"
     
   />
@@ -35,21 +34,56 @@ export default function LoginScreen({ navigation }) {
   
   <TextInput
     style={styles2.TextInput}
-    placeholder="Password"
+    placeholder="Building Name / Suite / Apt"
     placeholderTextColor="#003f5c"
     
   />
+  
 
 </View> 
-      <TouchableOpacity style={styles2.loginBtn} onPress={() => navigation.navigate('Home' )}>
-        <Text style={styles2.loginButton}>LOGIN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.orderType}>
-        <Text style={styles2.forgot_button}>Create Account</Text>
-        <Text style={styles2.forgot_button}>                                        </Text>
-        <Text style={styles2.forgot_button}>Forgot Password?</Text>
-      </TouchableOpacity>
 
+
+<View style={styles.generalInput}>
+  
+  <TextInput
+    style={styles2.TextInput}
+    placeholder="City"
+    placeholderTextColor="#003f5c"
+    
+  />
+  
+
+</View> 
+
+
+<View style={styles.generalInput}>
+  
+  <TextInput
+    style={styles2.TextInput}
+    placeholder="Zipcode"
+    placeholderTextColor="#003f5c"
+    
+  />
+  
+
+</View> 
+
+<View style={styles.generalInput}>
+  
+  <TextInput
+    style={styles2.TextInput}
+    placeholder="Delivery Instruction"
+    placeholderTextColor="#003f5c"
+    
+  />
+  
+
+</View> 
+
+      <TouchableOpacity style={styles2.loginBtn} onPress={() => navigation.navigate('Restaurants' ,{Time:Time})}>
+        <Text style={styles2.login}>Search for Locations</Text>
+      </TouchableOpacity>
+      
     </View>
 
     
@@ -90,7 +124,7 @@ const styles2 = StyleSheet.create({
     borderWidth:1,
     borderColor:'white',
     borderBottomColor:'black',
-     paddingTop:200,
+     paddingTop:80,
      fontFamily:"Palatino",
      fontSize: 30,
      color:"white",

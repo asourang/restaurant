@@ -30,6 +30,7 @@ import ContactScreen from "./ContactScreen";
 import GeneralFeedbackScreen from "./GeneralFeedbackScreen";
 import SpecificFeedbackScreen from "./SpecificFeedbackScreen";
 import AddOns from "./AddsOn";
+import Address from "./Address";
 
 const Stack = createStackNavigator();
 
@@ -44,6 +45,7 @@ const MainStackNavigator = () => {
     <Stack.Screen name="Menu" component={MenuScreen} />
     <Stack.Screen name="Login" component={LoginScreen} />
     <Stack.Screen name="Burgers" component={Burgers} />
+    <Stack.Screen name="Address" component={Address} />
     <Stack.Screen name="Hot Dogs" component={Hotdog} />
     <Stack.Screen name="Sandwiches" component={Sandwiches} />
     <Stack.Screen name="Fries" component={Fries} />
@@ -71,7 +73,7 @@ const FeedbackAppStackNavigator = () => {
       <Stack.Screen name="FeedbackLocation" component={FeedbackLocation} />
       <Stack.Screen name="GeneralFeedbackScreen" component={GeneralFeedbackScreen} />
       <Stack.Screen name="SpecificFeedbackScreen" component={SpecificFeedbackScreen} />
-      <Stack.Screen name="Home" component={HomeScreen} />
+
      
       </Stack.Navigator>
     );
